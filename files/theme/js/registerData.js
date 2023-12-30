@@ -17,7 +17,7 @@ const sendSignUpEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://new-bit-pay-back-end-zefw.vercel.app/api/signupemailsand', {
+  fetch('https://chi-backend.vercel.app/api/signupemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ button.onclick = async (event) => {
 
   console.log(data);
 
-  fetch('https://new-bit-pay-back-end-zefw.vercel.app/api/register', {
+  fetch('https://chi-backend.vercel.app/api/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ button.onclick = async (event) => {
       console.log(response.data._id)
       const userId = localStorage.getItem('userId')
       console.log("Local User Id", userId);
-      window.location.href = `https://bitpayaccount.vercel.app/#/${userId}`;
+      window.location.href = `https://bitpay-account.vercel.app/#/${userId}`;
       
     })
     .catch((error) => {

